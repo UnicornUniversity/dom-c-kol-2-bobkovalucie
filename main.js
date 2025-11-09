@@ -9,7 +9,7 @@
  * @returns {string} containing number converted to output system
  */
 
-export function convert (inputNumber, inputNumberSystem, outputNumberSystem){
+function convert (inputNumber, inputNumberSystem, outputNumberSystem){
     let decNumber=0;
     let arrDigits=binNumber.split('').map(Number);       //create an array of separated digits (1 or 0)
 
