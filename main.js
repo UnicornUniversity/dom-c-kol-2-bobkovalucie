@@ -6,7 +6,7 @@ function convert (inputNumber, inputNumberSystem, outputNumberSystem){
     let exponent = arrDigits.length-(i+1);
     decNumber += arrDigits[i]*2**exponent;
     }
-    return decNumber;
+    return decNumber.toString();
 }
 
 //TODO add/change doc as needed
