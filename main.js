@@ -1,5 +1,5 @@
 //TODO add imports if needed
-//import { exMain } from "./exclude/exampleAss2.js"
+import {convert} from "./src/convert.js"
 //TODO add/change doc as needed
 /**
  * TODO - Write functional code for this application. You can call any other function, but usage of ".toString(numberSystem)" and "Number.parseInt(number, numberSystem)" is forbidden (only permitted when used on individual digits).
