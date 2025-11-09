@@ -10,9 +10,9 @@
  * @param {number} outputNumberSystem numerical system that the inputNumber is being converted into
  * @returns {string} containing number converted to output system
  */
-export function convert(inputNumber, inputNumberSystem, outputNumberSystem) {
+export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
     let decNumber=0;
-    let arrDigits=binNumber.split('').map(Number);       //create an array of separated digits (1 or 0)
+    let arrDigits=inputNumber.split('').map(Number);       //create an array of separated digits (1 or 0)
 
     for (let i = 0; i < arrDigits.length; i++){
     let exponent = arrDigits.length-(i+1);
@@ -22,7 +22,7 @@ export function convert(inputNumber, inputNumberSystem, outputNumberSystem) {
     return decNumber.toString();
 }
 
-console.log(convert("1111101011", 2, 10));
+console.log(main("1111101011", 2, 10));
 
 
 /**
