@@ -20,7 +20,7 @@ function convert (inputNumber, inputNumberSystem, outputNumberSystem){
  * @returns {string} containing number converted to output system
  */
 export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
-	let dtoOut = convert(1011, 2, 10);
+	let dtoOut = convert("1011", 2, 10);
 	console.log(dtoOut);
 }
 
