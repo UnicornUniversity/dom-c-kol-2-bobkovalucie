@@ -1,15 +1,3 @@
-function convert (binNumber){
-    let dtoOut=0;
-    let arrDigits=binNumber.split('').map(Number);       //create an array of separated digits (1 or 0)
-
-    for (let i = 0; i < arrDigits.length; i++){
-    let exponent = arrDigits.length-(i+1);
-    dtoOut += arrDigits[i]*2**exponent;
-    }
-
-    return dtoOut;
-}
-
 //TODO add/change doc as needed
 /**
  * TODO - Write functional code for this application. You can call any other function, but usage of ".toString(numberSystem)" and "Number.parseInt(number, numberSystem)" is forbidden (only permitted when used on individual digits).
@@ -20,10 +8,21 @@ function convert (binNumber){
  * @param {number} outputNumberSystem numerical system that the inputNumber is being converted into
  * @returns {string} containing number converted to output system
  */
-export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
-	let dtoOut = convert("1011", 2, 10);
-	console.log(dtoOut);
+
+export function convert (inputNumber, inputNumberSystem, outputNumberSystem){
+    let decNumber=0;
+    let arrDigits=binNumber.split('').map(Number);       //create an array of separated digits (1 or 0)
+
+    for (let i = 0; i < arrDigits.length; i++){
+    let exponent = arrDigits.length-(i+1);
+    decNumber += arrDigits[i]*2**exponent;
+    }
+
+    return decNumber.toString();
 }
+
+let binNumber = "1111101011";
+console.log(convert(binNumber));
 
 
 /**
