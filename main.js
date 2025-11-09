@@ -1,3 +1,5 @@
+//TODO add imports if needed
+//import { exMain } from "./exclude/exampleAss2.js"
 //TODO add/change doc as needed
 /**
  * TODO - Write functional code for this application. You can call any other function, but usage of ".toString(numberSystem)" and "Number.parseInt(number, numberSystem)" is forbidden (only permitted when used on individual digits).
@@ -8,8 +10,7 @@
  * @param {number} outputNumberSystem numerical system that the inputNumber is being converted into
  * @returns {string} containing number converted to output system
  */
-
-function convert (inputNumber, inputNumberSystem, outputNumberSystem){
+export function convert(inputNumber, inputNumberSystem, outputNumberSystem) {
     let decNumber=0;
     let arrDigits=binNumber.split('').map(Number);       //create an array of separated digits (1 or 0)
 
@@ -21,8 +22,7 @@ function convert (inputNumber, inputNumberSystem, outputNumberSystem){
     return decNumber.toString();
 }
 
-let binNumber = "1111101011";
-console.log(convert(binNumber));
+console.log(convert("1111101011", 2, 10));
 
 
 /**
