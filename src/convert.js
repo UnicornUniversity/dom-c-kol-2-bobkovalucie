@@ -12,10 +12,5 @@ function convert (binNumber){
     return decNumber;
 }
 
-let arrBinNumbers = [1011,1111101000];
-for (let i = 0; i < arrBinNumbers.length; i++){
-    console.log(convert(arrBinNumbers[i]));
-}
-
 
 
