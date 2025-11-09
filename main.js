@@ -1,32 +1,44 @@
-//TODO add imports if needed
-//import { exMain } from "./exclude/exampleAss2.js"
-//TODO add/change doc as needed
 /**
- * TODO - Write functional code for this application. You can call any other function, but usage of ".toString(numberSystem)" and "Number.parseInt(number, numberSystem)" is forbidden (only permitted when used on individual digits).
  * The main function which calls the application. 
- * TODO - Please, add specific description here for the application purpose.
+ * Coversion input number from binary to decimal number system
  * @param {string} inputNumber number that is being converted
  * @param {number} inputNumberSystem numerical system that the inputNumber is being converted from
  * @param {number} outputNumberSystem numerical system that the inputNumber is being converted into
  * @returns {string} containing number converted to output system
  */
-export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
-    let decNumber=0;
-    let arrDigits=inputNumber.split('').map(Number);       //create an array of separated digits (1 or 0)
 
-    for (let i = 0; i < arrDigits.length; i++){
-    let exponent = arrDigits.length-(i+1);
-    decNumber += arrDigits[i]*2**exponent;
+export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
+	let decNumber=0;
+    let arrDigits=inputNumber.split('').map(Number);       //create an array of separated digits
+
+	
+    if (inputNumberSystem!==2){								//validation of input and output number systems
+        console.log("Invalid input number system");
+        process.exit(1)
+    }
+    else if (outputNumberSystem !== 10){
+        console.log("Invalid output number system");
+        process.exit(1)
+    }
+
+    for (let i = 0; i < arrDigits.length; i++) {            //validate input number as binary
+        if(arrDigits[i]!==0 && arrDigits[i]!==1){
+            console.log("Input is not a binary number");
+            process.exit(1)
+        }
+    }
+
+    for (let i = 0; i < arrDigits.length; i++){             //conversion calculation
+        let exponent = arrDigits.length-(i+1);
+        decNumber += arrDigits[i]*2**exponent;
     }
 
     return decNumber.toString();
 }
 
-console.log(main("1111101011", 2, 10));
 
 
 /**
- * TODO - Change this to contain all input number systems that your application can convert from.
  * Function which returns which number systems are permitted on input.
  * @returns {Array} array of numbers refering to permitted input systems
  */
@@ -35,7 +47,6 @@ export function permittedInputSystems() {
 }
 
 /**
- * TODO - Change this to contain all output number systems that your application can convert to.
  * Function which returns which number systems are permitted on output.
  * @returns {Array} array of numbers refering to permitted output systems
  */
