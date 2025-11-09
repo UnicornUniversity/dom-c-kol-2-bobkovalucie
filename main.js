@@ -14,7 +14,7 @@ export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
 
     for (let i = 0; i < arrDigits.length; i++){
     let exponent = arrDigits.length-(i+1);
-    decNumber += arrDigits[i]*inputNumberSystem**exponent;
+    decNumber += arrDigits[i]*2**exponent;
     }
   return decNumber;
 }
